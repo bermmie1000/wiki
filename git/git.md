@@ -27,7 +27,8 @@ _Last Updated: 2021-01-13_
 <br>
 
 ### 실습 흐름도
-![gitGraph0](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitGraphStep0.PNG)
+https://github.com/bermmie1000/wiki/blob/main/git/img/bash-add.PNG?raw=true
+![gitGraph0](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep0.PNG?raw=true)
 
 ---
 
@@ -75,7 +76,7 @@ GitLab은 2014년 개발된 __웹 기반 Git 저장소 관리자__ 및 __DevOps 
 ---
 
 ### 실습 (Step 1)
-![gitGraphStep1](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitGraphStep1.PNG)
+![gitGraphStep1](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep1.PNG?raw=true)
 
 __실습목표:__
 - GitLab의 remote repository를 local repository에 clone 수행
@@ -84,7 +85,7 @@ __실습목표:__
 >3. Clone 수행
 
 #### 1. Git 설치
-![gitDownload](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitDownload.PNG)
+![gitDownload](https://github.com/bermmie1000/wiki/blob/main/git/img/gitDownload.PNG?raw=true)
 
 - [Git 다운로드 링크](https://git-scm.com/downloads)에서 OS환경따라 파일 다운로드 및 설치
 
@@ -93,12 +94,12 @@ __실습목표:__
 >- 사용자 이메일
 >- 인증서 설정
 
-![gitCommitLog](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitCommitLog.PNG)
+![gitCommitLog](https://github.com/bermmie1000/wiki/blob/main/git/img/gitCommitLog.PNG?raw=true)
 
 ##### 사용자 이름 설정
 - commit 메세지에 기재 되는 사용자 명
 
-![username](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/username.PNG)
+![username](https://github.com/bermmie1000/wiki/blob/main/git/img/username.PNG?raw=true)
 
 ```git
 # "이름.성"이 포함된 자유형식
@@ -110,7 +111,7 @@ $ git config --global user.name "Jingeol.Ryu"
 ##### 사용자 이메일 설정
 - commit에 연결된 이메일 주소
 
-![useremail](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/useremail.PNG)
+![useremail](https://github.com/bermmie1000/wiki/blob/main/git/img/useremail.PNG?raw=true)
 
 ```git
 # 연락 받을 이메일 주소
@@ -138,7 +139,7 @@ $ git config --global http.sslVerify false
 >- 비슷한 파일이라도 실제 내용 일부 문구가 서로 다르면 다른 파일로 인식하기 때문에 파일을 변경 사항 별로 구분해 저장할 수 있습니다.
 
 >##### Remote와 Local의 차이는 무엇인가요?
->![local](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitRepo.PNG)
+>![local](https://github.com/bermmie1000/wiki/blob/main/git/img/gitRepo.PNG?raw=true)
 >- __Remote Repository__(원격 저장소): 파일이 서버에서 관리되며 여러 사람이 함께 공유하기 위한 repository입니다.
 >- __Local Repository__(로컬 저장소): 내 PC에 파일이 저장되는 개인 전용 repository입니다.
 
@@ -148,7 +149,7 @@ $ git config --global http.sslVerify false
 1. 타겟 repository 주소 획득
     - Remote Repository의 [주소](https://git.lsis.com/dx-team/temporary)는 GitLab에서 확인할 수 있습니다.
 
-    ![clone](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/cloneRepo.PNG)
+    ![clone](https://github.com/bermmie1000/wiki/blob/main/git/img/cloneRepo.PNG?raw=true)
 
 
 2. Console 명령어 입력
@@ -159,7 +160,7 @@ $ git config --global http.sslVerify false
     $ cd "your directory"
     $ git clone https://git.lsis.com/dx-team/temporary.git
     ```
-    ![bash-clone](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-clone.PNG)
+    ![bash-clone](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-clone.PNG?raw=true)
 
 
 
@@ -169,7 +170,7 @@ $ git config --global http.sslVerify false
 >_master branch에서 commit과 push만 할 줄 안다._
 
 ### 실습 (Step 2)
-![gitGraphStep2](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitGraphStep2.PNG)
+![gitGraphStep2](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep2.PNG?raw=true)
 __실습목표:__
 - Master branch에서 commit과 push 수행하기
 
@@ -186,7 +187,7 @@ __실습목표:__
 ##### Master branch가 뭔가요?
 ![master branch](https://backlog.com/git-tutorial/kr/img/post/stepup/capture_stepup1_1_3.png)
 
-![bash-master](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-master.PNG)
+![bash-master](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-master.PNG?raw=true)
 
 - repository를 처음 만들면, Git은 바로 'master'라는 이름의 branch를 만들어 둡니다. 이 새로운 repository에 새로운 파일을 추가 한다거나 추가한 파일의 내용을 변경하여 그 내용을 저장(커밋, Commit)하는 것은 모두 'master' 라는 이름의 branch를 통해 처리할 수 있는 일이 됩니다.
 
@@ -211,7 +212,7 @@ __실습목표:__
 #### 2. add
 - 수정된 README.md 파일을 Staging area로 add한다.
 
-![bash-add](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-add.PNG)
+![bash-add](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-add.PNG?raw=true)
 
 ```git
 # Local repository로 이동
@@ -225,7 +226,7 @@ $ git add .
 #### 3. commit
 - 변경된 이력을 Local repository에 commit한다.
 
-![bash-commit](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-commit.PNG)
+![bash-commit](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-commit.PNG?raw=true)
 
 ```git
 # "-m" 옵션을 사용해 한 줄 commit 메시지 작성
@@ -240,7 +241,7 @@ $ git commit -m "수정: 창범 생일 추가"
 #### 4. push
 - Remote repository에 push한다.
 
-![bash-push](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-push.PNG)
+![bash-push](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-push.PNG?raw=true)
 
 ```git
 # Local repository의 내용을 remote repository로 업로드한다.
@@ -249,13 +250,13 @@ $ git push
 
 - 충돌 발생
 
-![gitGraphStep2Conflict](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitGraphStep2Conflict.PNG)
+![gitGraphStep2Conflict](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep2Conflict.PNG?raw=true)
 
 
 #### 5. 병합
-![gitGraphStep2Resolve](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitGraphStep2Resolve.PNG)
+![gitGraphStep2Resolve](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep2Resolve.PNG?raw=true)
 
-![pullFetch](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/pullfetch.PNG)
+![pullFetch](https://github.com/bermmie1000/wiki/blob/main/git/img/pullfetch.PNG?raw=true)
 
 ##### pull
 - branch의 정보를 당겨온다.
@@ -266,7 +267,7 @@ $ git pull
 # 다른 branch pull할 시 origin을 붙여야 함
 $ git pull origin "branch"
 ```
-![bash-pullremote](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-pullremote.PNG)
+![bash-pullremote](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-pullremote.PNG?raw=true)
 ---
 
 ##### fetch + diff
@@ -277,17 +278,17 @@ $ git pull origin "branch"
 $ git fetch
 $ git diff "branch"
 ```
-![bash-diff](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-diff.PNG)
+![bash-diff](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-diff.PNG?raw=true)
 
 ##### merge
 - fetch로 알게된 정보를 바탕으로 수동 병합한다.
 ```git
 $ git merge "branch"
 ```
-![bash-merge](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-merge.PNG)
+![bash-merge](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-merge.PNG?raw=true)
 - VSCode를 사용중이면 Conflict가 발생한 지점에 선택지가 나타난다.
 
-![vscodeMerge](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/vscodeMerge.PNG)
+![vscodeMerge](https://github.com/bermmie1000/wiki/blob/main/git/img/vscodeMerge.PNG?raw=true)
 
 - Conflict 처리 후 commit 하면 해소된다.
 ```git
@@ -296,7 +297,7 @@ $ git add .
 $ git commit -m "행동: 설명"
 $ git push
 ```
-![bash-conflictResolve](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-conflictResolve.PNG)
+![bash-conflictResolve](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-conflictResolve.PNG?raw=true)
 
 
 
@@ -304,7 +305,7 @@ $ git push
 ## 2 단계
 >_branch와 merge를 사용하고, checkout으로 rollback을 사용한다._
 
-![gitGraphStep34](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitGraphStep34.PNG)
+![gitGraphStep34](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep34.PNG?raw=true)
 
 __실습 목표:__
 - 새로운 branch로 checkout하여 파일을 수정하고 push한다.
@@ -319,7 +320,7 @@ __실습 목표:__
 #### 1. New branch 생성 및 이동
 - 새로운 branch로 checkout하여 파일을 수정하고 push한다.
 >##### Branch가 무엇인가요?
->![gitGraphStep4Pull](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitGraphStep4Pull.PNG)
+>![gitGraphStep4Pull](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep4Pull.PNG?raw=true)
 >- branch란 독립적으로 어떤 작업을 진행하기 위한 개념입니다.
 >- 필요에 의해 만들어지는 각각의 branch는 다른 branch의 영향을 받지 않기 때문에, __여러 작업을 동시에 진행할 수 있습니다__.
 
@@ -329,14 +330,14 @@ __실습 목표:__
 # 컨벤션에 따라 branch 생성
 $ git branch changbum.chun
 ```
-![bash-branch](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-branch.PNG)
+![bash-branch](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-branch.PNG?raw=true)
 
 - New branch로 이동
 
 ```git
 $ git checkout "New branch"
 ```
-![bash-checkout](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-checkout.PNG)
+![bash-checkout](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-checkout.PNG?raw=true)
 
 #### 2. 파일 수정 및 push
 
@@ -370,11 +371,11 @@ $ git checkout "New branch"
 $ git log
 ```
 
-![bash-gitlog](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/bash-gitlog.PNG)
+![bash-gitlog](https://github.com/bermmie1000/wiki/blob/main/git/img/bash-gitlog.PNG?raw=true)
 
 - gitLab에서도 확인할 수 있다
 
-![gitlab-log](https://git.lsis.com/cbchun/dx-team-wiki/raw/master/08_Seminar/git/img/gitlab-log.PNG)
+![gitlab-log](https://github.com/bermmie1000/wiki/blob/main/git/img/gitlab-log.PNG?raw=true)
 
 #### 2. 과거 버전으로 rollback
 - log에서 확인한 과거 버전 commit 번호를 기반으로 rollback을 수행한다.
@@ -391,5 +392,3 @@ $ git switch -
 >_동작원리를 이해하며 고급 명령어를 사용하여 version history를 조작한다._
 
 ---
-여기 바뀌고
-fetch할때 제대로 비교하는 게 나왔으면 좋겠당 ㅎㅎ
