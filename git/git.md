@@ -27,7 +27,6 @@ _Last Updated: 2021-01-13_
 <br>
 
 ### 실습 흐름도
-https://github.com/bermmie1000/wiki/blob/main/git/img/bash-add.PNG?raw=true
 ![gitGraph0](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep0.PNG?raw=true)
 
 ---
@@ -171,6 +170,7 @@ $ git config --global http.sslVerify false
 
 ### 실습 (Step 2)
 ![gitGraphStep2](https://github.com/bermmie1000/wiki/blob/main/git/img/gitGraphStep2.PNG?raw=true)
+
 __실습목표:__
 - Master branch에서 commit과 push 수행하기
 
