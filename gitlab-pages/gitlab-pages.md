@@ -1,8 +1,7 @@
 # Gitlab Page Tutorial 😎
 _*본 문서는 Windows10 환경 기반으로 작성 되었습니다._
-_**에디터는 VSCode가 사용 되었습니다._
-http://jekyllrb-ko.github.io/
 
+_**에디터는 VSCode가 사용 되었습니다._
 
 ## 0. 목차
 1. GitLab 프로젝트 생성
@@ -15,6 +14,7 @@ http://jekyllrb-ko.github.io/
 ## 1. GitLab 프로젝트 생성
 ### 새로운 프로젝트 만들기
 - 웹페이지를 호스팅 해줄 GitLab으로 넘어와서 Remote repository를 생성한다.
+
 ![login](./images/login.png)
 
 ![blank](./images/blank-project.png)
