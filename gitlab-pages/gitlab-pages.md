@@ -17,15 +17,18 @@
 
 ### 프로젝트 환경 설정
 ![create](./images/create-project.png)
+
 - Project name의 형식은 "userName.gitlab.io"으로 작성한다.
     - 나의 경우 __userName__ 은 위 그림 중 오른쪽 상단에 표시된 것 처럼 __@changbum_chun__ 이다.
     - 형식 위반 시 URL이 지저분 해진다.
 - Repository의 Visibility Level은 원하는 상태로 설정한다.
     - 우리가 호스팅할 `Pages`와 지금 설정하는 Visibility Level은 별개이다.
     - `GitLab`의 경우 `Pages`의 Accessibility는 생성 완료 후 사이드바 > Settings > General > Visibility, project features, permissions > Pages에서 설정할 수 있다.
-    - 하지만 `GitHub`의 경우는 Enterprise 등급부터 Acessibility를 설정할 수 있다.
+    - 하지만 `GitHub`의 경우는 Enterprise 등급부터 Accessibility를 설정할 수 있다.
+
 ### 로컬 환경으로 clone
 ![클론](https://img.sbs.co.kr/newimg/news/20170607/201056067_1280.jpg)
+
 - 생성한 Remote repository를 로컬의 원하는 디렉토리에 clone한다.
 
 ```git
@@ -34,9 +37,11 @@ $ git clone "Repository"
 ```
 
 ![clone](./images/clone.png)
+
 ## 2. `Jekyll` template 적용
 - 이 튜토리얼에선 [Jekyll](http://jekyllrb-ko.github.io)이란 정적 사이트 생성기를 사용하여 웹페이지를 제작한다.
 - 이미 세상엔 `Jekyll`로 만들어진 멋진 템플렛들이 많고 [Jekyll Themes](http://jekyllthemes.org/)에서 둘러볼 수 있다.
+
 ### 템플렛 선택
 ![sphinx-theme](https://user-images.githubusercontent.com/68011645/88376699-87980500-cdd0-11ea-8900-7bab8c811bc9.png)
 
@@ -49,12 +54,13 @@ $ git clone "Repository"
     - 템플렛의 repository를 로컬로 [clone](https://github.com/rundocs/jekyll-rtd-theme)하는 방법
 
 ![folder](./images/folder.png)
+
 - 💡중요한 것은 __템플렛의 내용물을__ 위에서 우리가 생성하고 clone한 __로컬 repository에 위치 시키는 것__ 이다.
 
 ## 3. `Ruby` 환경 설정 💎
 ```note
 # 💡 __`GitHub` Only__
-- `GitLab`을 사용해서 튜토리얼을 진행중이라면 <U>3. Ruby 환경 설정 💎</U> 부분은 건너 뛰고 <U>4. 호스팅 설정<U>으로 가면 된다.
+- `GitLab`을 사용해서 튜토리얼을 진행중이라면 __3. Ruby 환경 설정 💎__ 부분은 건너 뛰고 __4. 호스팅 설정__ 으로 가면 된다.
 - `GitLab`은 해당 내용이 기재된 `*.yml`파일을 업로드하여 CI 작업마다 서버에 환경을 설치하기 때문이다.
 ```
 
@@ -82,7 +88,9 @@ $ ruby -v
 ```console
 $ gem install jekyll bundler
 ```
+
 - 이어서, local repository 디렉토리에서 bundle을 설치한다.
+
 ```console
 $ cd "local repository"
 $ bundle install
@@ -100,6 +108,7 @@ $ bundle install
 
 - `GitLab`의 경우
     - `_config.yml` 파일에서 repository, baseurl, url 세가지를 추가한다.
+
     ```yml
     repository: "userId/userId.gitlab.io"
     baseurl: ""
@@ -107,6 +116,7 @@ $ bundle install
     ```
 - `GitHub`의 경우
     - `_config.yml` 파일에서 baseurl, url 두가지를 추가한다.
+
     ```yml
     baseurl: ""
     url: https://userId.gitlab.io
@@ -118,10 +128,12 @@ $ bundle install
 - `Github`를 사용한다면 건너 뛰어도 되는 내용이다.
 - 사실 왜인지는 자세히 모르겠지만 `GitLab`에서는 CI를 위해 `runner`가 읽고 실행할 `*.yml`파일을 별도로 생성해주어야한다.
 ```
-![yml](./images/yml.png)
+
+![yml](./images/gitlab-yml.png)
 
 - 아래 code block에서 복붙한 `.gitlab-ci.yml` 이름의 파일을 같은 디렉토리 내에 생성한다. [출처](https://gitlab.com/pages/jekyll/-/blob/master/.gitlab-ci.yml)
-```yml {.numberLines}
+
+```yml
 image: ruby:latest
 
 variables:
@@ -164,8 +176,87 @@ pages:
 - 위의 순서를 잘 진행 했다면 Local repository의 변경 사항을 add, commit, push 하면 된다.
 
 ![page-setting](./images/page-setting.png)
+
 - 이후 CI의 pipeline에서 작업이 끝나길 기다린 후(약 3분) Setting의 Pages에서 url를 클릭하면 우리가 만든 웹페이지로 새 창 이동한다.
     - `GitLab`의 경우 pipeline의 작업 진행 상황은 사이드 바의 CI/CD 탭에서 관찰할 수 있다.
 
+### 짜잔!
+- 웹페이지 배포 성공
+![deploy](./images/deploy.png)
+
 ## 5. Template 수정
-오늘은 여기까지
+### 대문
+#### Title
+- 가장 먼저 웹사이트의 제목을 변경하자
+
+![title](./images/title.png)
+
+- 사이트의 제목과
+제목 위에 마우스 커서를 올려놓으면 뜨는 설명은
+`_config.yml`파일에서 수정한다.
+
+![newtitle](./images/newtitle.png)
+
+![newtitle2](./images/newtitle2.png)
+
+#### 홈 화면
+- 우리가 사용하는 템플릿은 `*.md`을 기반으로 게시물을 작성한다.
+- 사이트 접속 시 처음에 뜨는 홈 화면은 프로젝트 폴더 가장 상위(root)에 위치한 `README.md` 파일을 수정하면 된다.
+
+#### 게시물
+- 작성한 `*.md`파일을 게시하기 위해선 두가지 폴더만 알고 있으면 된다.
+  - 게시할 `*.md`파일 저장 폴더인 `root > assets > images`와
+  - `*.md`파일에 사용할 이미지 파일 저장 폴더인 `root > test`
+  - `test_long`을 사용하면 사이드바를 폴더 형식으로 사용할 수 있다.
+
+
+```console
+# 템플렛의 폴더 구조
+root
+├─.github
+│  ├─ISSUE_TEMPLATE
+│  └─workflows
+├─assets
+│  ├─css
+│  │  └─fonts
+│  ├─images <--------------------------- 이미지 파일 저장
+│  └─js
+├─test <-------------------------------- *.md 파일 저장
+├─test_long <--------------------------- *.md 파일 폴더 형식 저장
+│  ├─folder1
+│  │  └─folder2
+│  │      └─folder1
+│  └─folder2
+│      └─folder1
+├─_includes
+│  ├─common
+│  │  ├─assets
+│  │  ├─core
+│  │  └─rest
+│  ├─extra
+│  ├─rest
+│  ├─shortcodes
+│  └─templates
+├─_layouts
+│  └─tasks
+└─_sass
+    ├─core
+    └─lib
+        ├─@primer
+        │  └─css
+        │      ├─base
+        │      ├─breadcrumb
+        │      ├─buttons
+        │      ├─forms
+        │      ├─loaders
+        │      ├─markdown
+        │      ├─support
+        │      │  ├─mixins
+        │      │  └─variables
+        │      └─utilities
+        ├─font-awesome
+        ├─material-design-lite
+        └─rouge
+```
+
+# 끝 🤞
