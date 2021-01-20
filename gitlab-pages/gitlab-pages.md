@@ -4,18 +4,16 @@
 - _*** 아래 내용을 잘 숙지한다면 `GitHub`에서도 응용하여 사용할 수 있습니다._
 
 ## 0. 목차 🧭
-1. `GitLab` 프로젝트 생성
+1. 프로젝트 생성
 1. `Jekyll` template 적용
 1. `Ruby` 환경 설정
-1. `GitLab` 호스팅 설정
+1. 호스팅 설정
 1. Template 수정
 
 
-## 1. `GitLab` 프로젝트 생성
+## 1. 프로젝트 생성
 ### 새로운 프로젝트 만들기
-- 웹페이지를 호스팅 해줄 `GitLab`에서 Project(Remote repository)를 생성한다.
-- 로그인 후 새 프로젝트 생성
-    - Create a project -> Create blank project
+- 웹페이지를 호스팅 해줄 `GitLab` (혹은 `GitHub`)에서 Project(Remote repository)를 생성한다.
 
 ### 프로젝트 환경 설정
 ![create](./images/create-project.png)
@@ -51,9 +49,15 @@ $ git clone "Repository"
     - 템플렛의 repository를 로컬로 [clone](https://github.com/rundocs/jekyll-rtd-theme)하는 방법
 
 ![folder](./images/folder.png)
-- 💡중요한 것은 __템플렛의 내용물을__ 위에서 우리가 생성하고 clone한 __`GitLab`의 로컬 repository에 위치 시키는 것__ 이다.
+- 💡중요한 것은 __템플렛의 내용물을__ 위에서 우리가 생성하고 clone한 __로컬 repository에 위치 시키는 것__ 이다.
 
 ## 3. `Ruby` 환경 설정 💎
+```note
+# 💡 __`GitHub` Only__
+- `GitLab`을 사용해서 튜토리얼을 진행중이라면 <U>3. Ruby 환경 설정 💎</U> 부분은 건너 뛰고 <U>4. 호스팅 설정<U>으로 가면 된다.
+- `GitLab`은 해당 내용이 기재된 `*.yml`파일을 업로드하여 CI 작업마다 서버에 환경을 설치하기 때문이다.
+```
+
 - `Jekyll`은 [Ruby](https://www.ruby-lang.org/ko/) 언어로 작성 되었다.
 
 ### `Ruby` 다운로드
@@ -70,11 +74,6 @@ $ git clone "Repository"
 $ ruby -v
 ```
 ### `Jekyll` bundler 설치
-```note
-# 💡 __`GitHub` Only__
-- `GitLab`을 사용해서 튜토리얼을 진행중이라면 이 부분은 건너 뛰어도 된다.
-- `GitLab`은 해당 내용이 기재된 `*.yml`파일을 업로드하여 CI 작업마다 설치하기 때문이다.
-```
 
 - `Ruby`가 제대로 작동한다면 아래와 같이 콘솔창에서 gem을 사용해 jekyll bundler를 설치한다.
     - gem은 RubyGems의 줄임이고 `Ruby`의 package manager이다.
@@ -91,7 +90,7 @@ $ bundle install
 
 ![bundle](./images/bundle.png)
 
-## 4. `GitLab` 호스팅 설정
+## 4. 호스팅 설정
 - 내가 원하는대로 커스터마이즈를 하기 전에, 먼저, 적용한 __템플릿을 배포하고 그 템플릿의 기본 구조를 확인해보자.__
 - 위에서 받은 `jekyll` 템플릿 덕에 대부분의 설정은 완료 되어 있다.
 - 하지만 배포하기전 __수정해야할 파일__ 과 __생성해야할 파일__ 이 있다.
@@ -155,7 +154,7 @@ pages:
 ```
 
 ### CI 설정하기
-- 우리가 로컬에서 push하여 repository를 업데이트하면 똑똑한 `GitLab`은 CI pipeline을 통해 스스로 변경 사항을 새로 호스팅한다.
+- 우리가 로컬에서 push하여 repository를 업데이트하면 똑똑한 `GitLab`(혹은 `GitHub`)은 CI pipeline을 통해 스스로 변경 사항을 새로 호스팅한다.
 - 이를 `Auto DevOps`라 하는데 설정이 되어 있지 않은 경우 아래 그림처럼 사이드 바의 Settings 메뉴 중 CI/CD에서 __Default to Auto DevOps pipeline의 체크박스를 체크__ 해야 한다.
 - `GitHub`의 경우 기본으로 체크되어있기 때문에 별도로 설정하기 않아도 된다.
 
